@@ -1,0 +1,1 @@
+docker run -d --rm --name "skyprecision_server" --env-file .env.prod -p "8000:8000" mitchellss/skyprecision:server-vX.X.X python manage.py runserver 0.0.0.0:8000
