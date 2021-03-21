@@ -4,10 +4,10 @@ services:
         django:
                 image: mitchellss/skyprecision:server-vX.X.X 
                 container_name: skyprecision_prod_server
-                build: .
+                build: 
+                        context: .
+                        dockerfile: Dockerfile.prod
                 command: python manage.py runserver 0.0.0.0:8000
-                volumes:
-                        - .:/app
                 ports:
                         - "8000:8000"
                 env_file:
