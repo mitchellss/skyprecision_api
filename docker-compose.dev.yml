@@ -4,7 +4,9 @@ services:
         django:
                 image: skyprecision_server_dev
                 container_name: skyprecision_dev_server
-                build: .
+                build:
+                        context: .
+                        dockerfile: Dockerfile.dev
                 command: python manage.py runserver 0.0.0.0:8000
                 volumes:
                         - .:/app
